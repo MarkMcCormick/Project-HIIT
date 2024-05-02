@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .timer-box {
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .timer-box span {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+
+
+  .header h1 {
+    margin: 0;
+  }
+  
+  #builderTitle
+  {
+    text-align: center;
+  }
+  .section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    margin-top: 0;
+  }
+  
+  .activity {
+    margin-bottom: 10px;
+  }
+  
+  .activity input[type='text'],
+  .activity input[type='number'],
+  .activity textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+
+
+  .activity textarea {
+    height: 80px;
+  }
+  
+  .buttons {
+    text-align: center;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .timer-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .timer-container h2 {
+    margin-top: 0;
+  }
+  
+  .timer {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #007bff;
+  }
+  
+  #currentActivity {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures the navbar appears on top of other content */
+  }
+
+
+  
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+
+  .content
+  {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: 600px) {
+    nav a {
+      padding: 10px;
+    }
+  }

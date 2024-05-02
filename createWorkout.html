@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIIT Workout Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Create Workout</a>
+    <a href="#">My Workouts</a>
+    <a href="#">Account</a>
+    <a href="#">Log Out</a>
+  </nav>
+  
+  <div class="content">
+    <h1>Welcome to Your Workout App</h1>
+    <p>Get started by creating your workout plan or explore your existing workouts. Remember to stay hydrated and take breaks as needed!</p>
+    <p>When you're ready to move on to the next activity, simply navigate using the menu below.</p>
+  </div>
+
+  <div id="workoutBuilder">
+    <h1 id="builderTitle">HIIT Workout Builder</h1>
+    <div class="activity">
+      <input type="text" id="workoutName" placeholder="Workout Name">
+      <textarea placeholder="Add a description of your workout (optional)"></textarea>
+      <!--<input type="number" placeholder="Duration (seconds)"> -->
+      <button onclick="hideWorkoutBuilder()">Add Workout!</button>
+
+      <div class="timer">
+        <div class="timer-box">
+          <input id="hours" type="number" min="0" max="99" value="0">
+          <span class="label">Hours</span>
+        </div>
+        <div class="timer-box">
+          <input id="Minutes" type="number" min="0" max="99" value="0">
+          <span class="label">Minutes</span>
+        </div>
+        <div class="timer-box">
+          <input id="seconds" type="number" min="0" max="99" value="0">
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </div>
+    <button id="addActivity">Add a new workout</button>
+    <button id="startWorkout">Start Workout</button>
+  </div>
+
+  <div id="repsSetsForm" style="display:none">
+    <h1 id="WorkoutName_placeholder">WorkoutnamePlaceholder</h1>
+    <h1>Add Reps and Sets</h1>
+    <div class="activity" id="activityTemplate">
+
+      <label for="activityName">Choose an activity</label>
+      <select id="activityName" onchange="checkActivityType()">
+       <!-- <option value="1|push-up" selected>Push-ups</option>
+        <option value="1|">Sit-ups</option>
+        <option value="2|">Planks</option>
+        <option value="3|flat-bench">Flat-bench dumbbell press</option>
+        <option value="1|">Pull-ups</option> -->
+      </select>
+      
+      <button onclick = "CreateCustomWorkout()" id="CustomWorkoutButton">Custom Activity!</button>
+
+
+      <div id = "customWorkoutMenu">
+        <button onclick = "addButton()" id ="CustomDone">Add</button>
+
+        <button onclick="exitCustomWorkout()" id="exitCustomButton">Exit</button>
+
+        <input id="customWorkout" type="text" placeholder="Workout name">
+
+        <div id="trackingtType">
+          <input type="radio" id="weightsAndReps" name="trackingOption" value="weightsAndReps">
+          <label for="weightsAndReps">Track weights and reps</label>
+
+          <input type="radio" id="justReps" name="trackingOption" value="justReps">
+          <label for="justReps">Track just reps</label>
+
+          <input type="radio" id="timer" name="trackingOption" value="timer">
+          <label for="timer">Require a timer</label>
+        </div>
+
+</div>
+
+<br>
+      <div id="activitiesContainer"></div>
+      <h3 id="setCountDisplay"></h3>
+
+      <form id = "workoutData">
+        <!-- Below displays just the reps-->
+        <input id="reps" type="number" placeholder="Reps" style="display: none;">
+
+        <!--Below displays reps and weight-->
+        <div id="reps_weight_display" style="display:none">
+          <input id="reps_input" type="number" placeholder="Reps">
+          <input id="weight_input" type="number" placeholder="weight (KG)">
+        </div>
+        <!-- Below displays the workout timer-->
+        <div id="workoutTimer" style="display:none">
+          <div id="currentActivity"></div>
+          <div id="timer">00:00</div>
+          <button id="pause">Pause</button>
+          <button id="stop">Stop</button>
+        </div>
+      </form>
+
+      <div id="setsContainer" style="display:none;">
+      </div>
+      <button onclick="newSet()">Add a new set!</button>
+    </div>
+
+  </div>
+  <button onclick="submitWorkout()">Add New Activity</button>
+  <button>Finished!</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
